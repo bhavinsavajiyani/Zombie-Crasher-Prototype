@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2193397479332407416}
   m_Layer: 0
   m_Name: Player Tank 1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -172,6 +172,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0800e818408f54ee8910632fa4be2894, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: {x: 0, y: 0, z: 0}
+  x_Speed: 8
+  z_Speed: 15
+  accelarated: 15
+  deaccelarated: 10
+  low_Sound_Pitch: 0
+  normal_Sound_Pitch: 0
+  high_Sound_Pitch: 0
+  engine_On_Sound: {fileID: 0}
+  engine_Off_Sound: {fileID: 0}
 --- !u!1001 &6143279993091666882
 PrefabInstance:
   m_ObjectHideFlags: 0

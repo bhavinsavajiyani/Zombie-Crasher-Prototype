@@ -15,6 +15,7 @@ public class PlayerController : BaseController
     void Update()
     {
         ControlMovementWithKeyBoard();
+        ChangeRotation();
     }
 
     void FixedUpdate()
@@ -67,6 +68,29 @@ public class PlayerController : BaseController
         if(Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp(KeyCode.S))
         {
             MoveNormal();
+        }
+    }
+
+    void ChangeRotation()
+    {
+        if(speed.x > 0)
+        {
+            // Spherically rotate from current rotation to target rotation
+            transform.rotation = Quaternion.Slerp(transform.rotation,
+                Quaternion.Euler(0f, maxAngle, 0f), Time.deltaTime * rotationSpeed);
+        }
+
+        else if(speed.x < 0)
+        {
+            // Spherically rotate from current rotation to target rotation
+            transform.rotation = Quaternion.Slerp(transform.rotation,
+                Quaternion.Euler(0f, -maxAngle, 0f), Time.deltaTime * rotationSpeed);
+        }
+
+        else
+        {
+            transform.rotation = Quaternion.Slerp(transform.rotation,
+                Quaternion.Euler(0f, 0f, 0f), Time.deltaTime * rotationSpeed);
         }
     }
 }

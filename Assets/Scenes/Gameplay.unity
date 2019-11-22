@@ -364,6 +364,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e045423b39f4cd68bc9c2ba288222b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  distance: 4.5
+  height: 3.5
+  height_Damping: 3.25
+  rotation_Damping: 0.27
 --- !u!1001 &1496689925
 PrefabInstance:
   m_ObjectHideFlags: 0
