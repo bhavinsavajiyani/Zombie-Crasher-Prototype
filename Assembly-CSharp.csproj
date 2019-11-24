@@ -46,6 +46,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Block Scripts\GroundBlock.cs" />
+     <Compile Include="Assets\Scripts\Bullet\Bullet.cs" />
      <Compile Include="Assets\Scripts\Camera\SmoothFollow.cs" />
      <Compile Include="Assets\Scripts\Player\BaseController.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
