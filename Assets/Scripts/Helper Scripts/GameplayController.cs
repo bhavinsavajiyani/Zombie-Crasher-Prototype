@@ -51,7 +51,7 @@ public class GameplayController : MonoBehaviour
         yield return new WaitForSeconds(timer);
 
         CreateObstacles(playerController.gameObject.transform.position.z + halfGroundSize);
-        StartCoroutine(GenerateObstacles());
+        StartCoroutine("GenerateObstacles");
     }
 
     void CreateObstacles(float zPos)
@@ -117,9 +117,9 @@ public class GameplayController : MonoBehaviour
 
         for(int i = 0; i < count; i++)
         {
-            Vector3 shift = new Vector3(Random.Range(-0.5f, 0.5f), 0f, Random.Range(1f, 10f) * i);
+            Vector3 shift = new Vector3(Random.Range(-0.5f, 0.5f), 1.3f, Random.Range(1f, 10f) * i);
             Instantiate(zombiePrefabs[Random.Range(0, zombiePrefabs.Length)],
-                pos + shift * i, Quaternion.identity);
+                pos + shift * i, Quaternion.Euler(0f, 180f, 0f));
         }
     }
 }

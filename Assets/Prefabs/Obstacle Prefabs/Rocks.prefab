@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 455790}
   - component: {fileID: 6555788}
   - component: {fileID: 8297380}
+  - component: {fileID: 4849339741848993749}
   m_Layer: 8
   m_Name: Rocks
   m_TagString: Obstacle
@@ -222,6 +223,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4849339741848993749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2c16aa7dd1eb476d810f456f8980f9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 1242859992640132, guid: a30f4231b59ac4cac82b2b2931f7a678,
+    type: 3}
+  damage: 20
 --- !u!1 &155792
 GameObject:
   m_ObjectHideFlags: 0

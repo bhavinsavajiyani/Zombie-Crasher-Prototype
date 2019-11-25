@@ -168,9 +168,10 @@ GameObject:
   - component: {fileID: 3996870610961116949}
   - component: {fileID: 3996870610962116053}
   - component: {fileID: 7195653674236386982}
+  - component: {fileID: 4722391084396644102}
   m_Layer: 0
   m_Name: Troop Truck
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -250,3 +251,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.422969, y: 4.3932605, z: 10.811963}
   m_Center: {x: 0, y: 2.1966302, z: 0.00000023841856}
+--- !u!114 &4722391084396644102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3996870610964378389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2c16aa7dd1eb476d810f456f8980f9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 1242859992640132, guid: a30f4231b59ac4cac82b2b2931f7a678,
+    type: 3}
+  damage: 20

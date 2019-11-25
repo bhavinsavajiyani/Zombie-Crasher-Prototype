@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 2628273727891912448}
   - component: {fileID: 2628273727890814400}
   - component: {fileID: 6968500661941349171}
+  - component: {fileID: 9046247806133652305}
+  - component: {fileID: -5123241707793904246}
   m_Layer: 0
   m_Name: Fuel Truck
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -177,6 +179,34 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &9046247806133652305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2628273727888878336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2c16aa7dd1eb476d810f456f8980f9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 1242859992640132, guid: a30f4231b59ac4cac82b2b2931f7a678,
+    type: 3}
+  damage: 20
+--- !u!65 &-5123241707793904246
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2628273727888878336}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.9903674, y: 4.641081, z: 10.814847}
+  m_Center: {x: 0, y: 2.3205404, z: 0.001441717}
 --- !u!1 &2628273727888878340
 GameObject:
   m_ObjectHideFlags: 0

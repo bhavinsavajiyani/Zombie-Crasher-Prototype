@@ -49,6 +49,9 @@
      <Compile Include="Assets\Scripts\Bullet\Bullet.cs" />
      <Compile Include="Assets\Scripts\Camera\SmoothFollow.cs" />
      <Compile Include="Assets\Scripts\Helper Scripts\GameplayController.cs" />
+     <Compile Include="Assets\Scripts\Obstacles\DestroyAfterTime.cs" />
+     <Compile Include="Assets\Scripts\Obstacles\ExplosiveObstacle.cs" />
+     <Compile Include="Assets\Scripts\Obstacles\ZombieDestruction.cs" />
      <Compile Include="Assets\Scripts\Player\BaseController.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
      <None Include="Assets\Models\Military\Materials\UnlitVertexColour_Alpha.shader" />
