@@ -293,5 +293,6 @@
 "Assets/Scripts/Block Scripts/GroundBlock.cs"
 "Assets/Scripts/Bullet/Bullet.cs"
 "Assets/Scripts/Camera/SmoothFollow.cs"
+"Assets/Scripts/Helper Scripts/GameplayController.cs"
 "Assets/Scripts/Player/BaseController.cs"
 "Assets/Scripts/Player/PlayerController.cs"
