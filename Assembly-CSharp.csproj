@@ -48,6 +48,7 @@
      <Compile Include="Assets\Scripts\Block Scripts\GroundBlock.cs" />
      <Compile Include="Assets\Scripts\Bullet\Bullet.cs" />
      <Compile Include="Assets\Scripts\Camera\SmoothFollow.cs" />
+     <Compile Include="Assets\Scripts\Helper Scripts\AnimationEvents.cs" />
      <Compile Include="Assets\Scripts\Helper Scripts\GameplayController.cs" />
      <Compile Include="Assets\Scripts\Obstacles\DestroyAfterTime.cs" />
      <Compile Include="Assets\Scripts\Obstacles\ExplosiveObstacle.cs" />
@@ -75,6 +76,9 @@
  </Reference>
  <Reference Include="Unity.Rider.Editor">
  <HintPath>/Users/bhavinsavajiyani/Desktop/Unity Projects/Awesome Zombie Crasher/Awesome Zombie Crasher/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Sprite.Editor">
+ <HintPath>/Users/bhavinsavajiyani/Desktop/Unity Projects/Awesome Zombie Crasher/Awesome Zombie Crasher/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
  <HintPath>/Users/bhavinsavajiyani/Desktop/Unity Projects/Awesome Zombie Crasher/Awesome Zombie Crasher/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : BaseController
 {
@@ -10,10 +11,17 @@ public class PlayerController : BaseController
     public GameObject bullet_Prefab;
     public ParticleSystem shootFX;
 
+    private Animator _shootSliderAnim;
+    [HideInInspector]
+    public bool canShoot;
+
     // Start is called before the first frame update
     void Start()
     {
         _myBody = GetComponent<Rigidbody>();
+        _shootSliderAnim = GameObject.Find("FireBar").GetComponent<Animator>();
+        GameObject.Find("ShootButton").GetComponent<Button>().onClick.AddListener(ShootingControl);
+        canShoot = true;
     }
 
     // Update is called once per frame
@@ -21,7 +29,6 @@ public class PlayerController : BaseController
     {
         ControlMovementWithKeyBoard();
         ChangeRotation();
-        ShootingControl();
     }
 
     void FixedUpdate()
@@ -102,11 +109,17 @@ public class PlayerController : BaseController
 
     public void ShootingControl()
     {
-        if(Input.GetMouseButtonDown(0))
+        if(Time.timeScale != 0)
         {
-            GameObject bullet = Instantiate(bullet_Prefab, bullet_StartPoint.position, Quaternion.identity);
-            bullet.GetComponent<Bullet>().Move(2000f);
-            shootFX.Play();
+            if(canShoot)
+            {
+                GameObject bullet = Instantiate(bullet_Prefab, bullet_StartPoint.position, Quaternion.identity);
+                bullet.GetComponent<Bullet>().Move(2000f);
+                shootFX.Play();
+
+                canShoot = false;
+                _shootSliderAnim.Play("Fill animation");
+            }
         }
     }
 }

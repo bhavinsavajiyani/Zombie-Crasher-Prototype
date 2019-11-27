@@ -8,7 +8,7 @@ public class BaseController : MonoBehaviour
     public float x_Speed = 8.0f, z_Speed = 15.0f; // _xSpeed = Left/Right Movement Speed & _zSpeed = Forward/Backward Movement Speed
 
     //Speed when moving forward and slowing down
-    public float accelarated = 15.0f, deaccelarated = 10.0f;
+    public float accelarated = 25.0f, deaccelarated = 10.0f;
 
     protected float rotationSpeed = 10.0f;
     protected float maxAngle = 10.0f;
