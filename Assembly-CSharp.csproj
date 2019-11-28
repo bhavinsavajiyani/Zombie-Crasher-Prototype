@@ -50,11 +50,13 @@
      <Compile Include="Assets\Scripts\Camera\SmoothFollow.cs" />
      <Compile Include="Assets\Scripts\Helper Scripts\AnimationEvents.cs" />
      <Compile Include="Assets\Scripts\Helper Scripts\GameplayController.cs" />
+     <Compile Include="Assets\Scripts\Helper Scripts\MainMenuController.cs" />
      <Compile Include="Assets\Scripts\Obstacles\DestroyAfterTime.cs" />
      <Compile Include="Assets\Scripts\Obstacles\ExplosiveObstacle.cs" />
      <Compile Include="Assets\Scripts\Obstacles\ZombieDestruction.cs" />
      <Compile Include="Assets\Scripts\Player\BaseController.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
      <None Include="Assets\Models\Military\Materials\UnlitVertexColour_Alpha.shader" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/Users/bhavinsavajiyani/Desktop/Unity Projects/Awesome Zombie Crasher/Awesome Zombie Crasher/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

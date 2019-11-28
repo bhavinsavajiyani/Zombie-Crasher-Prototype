@@ -10,6 +10,6 @@ public class Bullet : MonoBehaviour
     public void Move(float speed)
     {
         _myBody.AddForce(transform.forward.normalized * speed);
-        Destroy(this.gameObject, 0.7f);
+        Destroy(this.gameObject, 1.0f);
     }
 }

@@ -5,14 +5,14 @@ using UnityEngine;
 public class ExplosiveObstacle : MonoBehaviour
 {
     public GameObject explosionPrefab;
-    public int damage = 20;
+    public int damage;
     
     private void OnCollisionEnter(Collision other)
     {
         if(other.gameObject.tag == "Player")
         {
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-            // Deal Damage
+            other.gameObject.GetComponent<PlayerHealth>().Damage(damage);
             Destroy(this.gameObject, 0.2f);
         }
 

@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameplayController : MonoBehaviour
 {
@@ -11,6 +13,16 @@ public class GameplayController : MonoBehaviour
     public float min_Obstacle_Delay = 10f, max_Obstacle_Delay = 40f;
     public float halfGroundSize;
     private BaseController playerController;
+
+    private Text _scoreText;
+    private int _zombieKillCount;
+    [SerializeField]
+    private GameObject _pausePanel;
+    [SerializeField]
+    private GameObject _gameOverPanel;
+
+    [SerializeField]
+    private Text _finalScore;
 
     private void Awake()
     {
@@ -24,6 +36,8 @@ public class GameplayController : MonoBehaviour
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<BaseController>();
 
         StartCoroutine(GenerateObstacles());
+
+        _scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
     }
 
     // Update is called once per frame
@@ -121,5 +135,42 @@ public class GameplayController : MonoBehaviour
             Instantiate(zombiePrefabs[Random.Range(0, zombiePrefabs.Length)],
                 pos + shift * i, Quaternion.Euler(0f, 180f, 0f));
         }
+    }
+
+    public void IncreaseScore()
+    {
+        _zombieKillCount ++;
+        _scoreText.text = _zombieKillCount.ToString();
+    }
+
+    public void PauseGame()
+    {
+        _pausePanel.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void ResumeGame()
+    {
+        _pausePanel.SetActive(false);
+        Time.timeScale = 1f;
+    }
+
+    public void ExitGame()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void GameOver()
+    {
+        _gameOverPanel.SetActive(true);
+        _finalScore.text = "Killed: " + _zombieKillCount.ToString();
+        Time.timeScale = 0f;
+    }
+
+    public void RestartGame()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Gameplay");
     }
 }

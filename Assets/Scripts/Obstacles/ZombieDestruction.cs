@@ -50,7 +50,7 @@ public class ZombieDestruction : MonoBehaviour
         {
             Instantiate(bloodFXPrefab, new Vector3(transform.position.x, 1.0f, transform.position.z), Quaternion.identity);
             Die();
-            //Increase Score
+            GameplayController.instance.IncreaseScore();
             Destroy(this.gameObject, 3.0f);
         }    
     }

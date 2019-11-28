@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 7732653537755143606}
   - component: {fileID: 1050900661654426534}
   - component: {fileID: 2193397479332407416}
+  - component: {fileID: 7707856685654560240}
   m_Layer: 0
   m_Name: Player Tank 1
   m_TagString: Player
@@ -205,7 +206,7 @@ MonoBehaviour:
   speed: {x: 0, y: 0, z: 0}
   x_Speed: 8
   z_Speed: 15
-  accelarated: 15
+  accelarated: 25
   deaccelarated: 10
   low_Sound_Pitch: 0
   normal_Sound_Pitch: 0
@@ -216,6 +217,19 @@ MonoBehaviour:
   bullet_Prefab: {fileID: 1699968169118701615, guid: 9fafa6cd76f5b4dd6a7f509b14ecfa1c,
     type: 3}
   shootFX: {fileID: 6143279991451021308}
+  canShoot: 0
+--- !u!114 &7707856685654560240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4713703470646732798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 719b645515b774df0962facfc7fb7a92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6143279991466277926
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -227,6 +241,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FX_Shoot
       objectReference: {fileID: 0}
+    - target: {fileID: 19878874, guid: 222140f7db09ddb4c8aebd5a301235cf, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 478874, guid: 222140f7db09ddb4c8aebd5a301235cf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -237,7 +255,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 478874, guid: 222140f7db09ddb4c8aebd5a301235cf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5
+      value: -7
       objectReference: {fileID: 0}
     - target: {fileID: 478874, guid: 222140f7db09ddb4c8aebd5a301235cf, type: 3}
       propertyPath: m_LocalRotation.x
@@ -269,10 +287,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 478874, guid: 222140f7db09ddb4c8aebd5a301235cf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 19878874, guid: 222140f7db09ddb4c8aebd5a301235cf, type: 3}
-      propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
